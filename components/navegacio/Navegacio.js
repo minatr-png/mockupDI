@@ -66,5 +66,8 @@ const styles = StyleSheet.create({
       backgroundColor: '#F3C1BC',
       flexDirection:'row',
       position: 'absolute',
+      bottom:0,
+      borderTopColor: 'black',
+      borderTopWidth: 2,
     },
   });

@@ -6,14 +6,14 @@
  * @flow strict-local
  */
 
-import React, { Component } from 'react';
+import React, { Component } from './node_modules/react';
 import {
   StyleSheet,
   View,
   Text,
-  Image,
 } from 'react-native';
 import { Navegacio } from './components/navegacio/Navegacio';
+import { Event } from './components/event/Event';
 
 class App extends Component {
   render() {
@@ -23,20 +23,7 @@ class App extends Component {
               <Text style={styles.tituloText}>TAKE A LOOK</Text>
               <Text style={styles.tituloText}>TO THIS EVENT</Text>
           </View>
-          <View style={styles.seccion}>
-            <Text style={styles.sectionMatch}>COPA DEL REY</Text>
-            <View style={styles.container}>
-              <Image
-                style={styles.shield}
-                source={require('./assets/shields/Valencia.png')}
-              />
-              <Text style={styles.vs}>vs</Text>
-              <Image
-                style={styles.shield}
-                source={require('./assets/shields/Madrid.png')}
-              />
-            </View>
-          </View>
+          <Event></Event>
           <View style={styles.titulo}>
             <Text style={styles.tituloText}>DO YOU FEEL IN</Text>
             <Text style={styles.tituloText}>NEED OF HELP?</Text>
@@ -91,33 +78,7 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     fontSize: 25,
-    fontFamily: 'Comfortaa',
-  },
-  sectionMatch: {
-    color: 'white',
-    textAlign: 'center',
-    fontSize: 32,
-    fontFamily: 'Comfortaa',
-    marginTop: '5%',
-  },
-  vs: {
-    color: 'white',
-    textAlign: 'center',
-    fontSize: 40,
-    marginTop: '14%',
-    fontFamily: 'Comfortaa',
-  },
-  shield: {
-    height: '60%',
-    width: '37%',
-    marginTop: '5%',
-    marginLeft: '4%',
-    marginRight: '4%',
-  },
-  container: {
-    flexDirection:'row',
-    height: '100%',
-    width: '100%',
+    fontFamily: 'Comfortaa',    
   },
 });
 
